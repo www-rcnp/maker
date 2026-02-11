@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<link rel="icon" type="image/png" sizes="32x32" href="i9.png">  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfólio | RCNP-MAKER</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+.page{
+  min-height:100vh;
+  background:url("fundo.png") center/cover no-repeat;
+  position:relative;
+}
+
+.page::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.0);
+}
+
+.container{
+  position:relative;
+  z-index:2;
+  padding:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+header h1{
+  font-size:22px;
+  margin:0;
+  color:#EFC020;
+  text-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+/* MINI CURRICULO */
+.mini-box{
+  margin-bottom:30px;
+}
+
+/* AQUI É O TEXTO DO NOME ABAIXO DA MARCA >>>>>>>>>>>>>>>>>>>>>>*/
+.mini-title{
+  font-size:18px;
+  opacity:.8;
+  margin:5px 0 10px 0;
+  color:#000;
+}
+
+/* AQUI É O TEXTO DE APRESENTAÇÃO ABAIXO DA MARCA >>>>>>>>>>>>>>>>>>>>>>*/
+.mini-text{
+  font-size:14px;
+  line-height:1.5;
+  opacity:.85;
+  max-width:800px;
+  color:#000;
+}
+
+/* LOGOS */
+.empresas{
+  margin-top:15px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.empresas a img{
+  height:40px;
+  width:auto;
+  opacity:.85;
+  transition:.3s;
+}
+
+.empresas a img:hover{
+  opacity:1;
+  transform:scale(1.05);
+}
+
+.back{
+  text-decoration:none;
+  color:#000;
+  background:#efcc20;
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,.08);
+  border-radius:16px;
+  overflow:hidden;
+  backdrop-filter: blur(8px);
+}
+
+/* VIDEO WRAPPER */
+.video-wrapper{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#000;
+}
+
+.video-wrapper.vertical{
+  padding-top:177.78%;
+}
+
+.video-wrapper.horizontal{
+  padding-top:56.25%;
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* INFO */
+.card .info{
+  padding:12px;
+}
+
+.card h3{
+  font-size:15px;
+  margin:0;
+  opacity:.9;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  text-align:center;
+  font-size:13px;
+  opacity:.7;
+}
+
+/* DESKTOP */
+@media (min-width:768px){
+  .grid{
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  }
+    .card-horizontal{
+    grid-column: span 2;
+  }
+ 
+  header h1{
+    font-size:28px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+  <div class="container">
+
+    <header>
+      <h1>Portfólio | RCNP-MAKER</h1>
+      <a class="back" href="index.html">Voltar</a>
+    </header>
+
+    <!-- MINI CURRÍCULO -->
+    <div class="mini-box">
+      <div class="mini-title">Rafael Cinalli</div>
+      <div class="mini-text">
+        Criação de conteúdo de audio, texto e vídeo utilizando Inteligência Artificial<br>
+        Edição de imagem, audio e vídeo.
+      </div>
+
+      <!-- LOGOS EMPRESAS -->
+      <div class="empresas">
+      <p style="margin-top:15px; font-weight:bold; opacity:.8; color:#EFC020;">
+        Projetos desenvolvidos para:
+      </p>
+
+        <a href="https://www.qconcursos.com/" target="_blank">
+          <img src="VQ_4.png" alt="SEBRAE">
+        </a>  
+        
+        <a href="https://direitoreal.com.br" target="_blank">
+          <img src="VD_1.png" alt="Empresa 2">
+        </a>
+
+         <!-- LOGOS EMPRESAS - AQUI PODE SER ADICIONADO MAIS EMPRESAS, BASTA ABRIR O COMENTÁRIO
+        <a href="https://www.empresa3.com.br" target="_blank">
+          <img src="logo3.png" alt="Empresa 3">
+        </a> -->
+
+        <!-- LOGOS EMPRESAS - AQUI PODE SER ADICIONADO MAIS EMPRESAS, BASTA ABRIR O COMENTÁRIO
+        <a href="https://www.empresa3.com.br" target="_blank">
+          <img src="logo3.png" alt="Empresa 3">
+        </a> -->
+
+        <!-- LOGOS EMPRESAS - AQUI PODE SER ADICIONADO MAIS EMPRESAS, BASTA ABRIR O COMENTÁRIO
+        <a href="https://www.empresa3.com.br" target="_blank">
+          <img src="logo3.png" alt="Empresa 3">
+        </a> -->
+
+
+      </div>
+    </div>
+
+    <section class="grid">
+
+      <!-- TODOS OS SEUS VIDEOS ORIGINAIS AQUI (NÃO ALTERADOS) -->
+
+ <section class="grid">
+
+         <!-- VIDEO 2 - HORIZONTAL (16:9) -->
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://player.vimeo.com/video/1163709757?title=0&byline=0&portrait=0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Institucional – SEBRAE-RJ (Fim de Ano)</h3>
+        </div>
+      </div>
+
+
+ <!-- VIDEO 2 - HORIZONTAL (16:9) -->
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://drive.google.com/file/d/1gOGcdOblyJj7jjG2sNFjQeTrtVMkT6_e/preview"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Institucional – SEBRAE-RJ (Fim de Ano)</h3>
+        </div>
+      </div>
+      
+
+      <!-- VIDEO 2 - HORIZONTAL (16:9) -->
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/DY4vCcd8u6c?si=TkyM9F5DGTpEuwvL"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Institucional – SEBRAE-RJ (Fim de Ano)</h3>
+        </div>
+      </div>
+
+      <!-- VIDEO 2 - HORIZONTAL (16:9) -->
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/DY4vCcd8u6c?si=TkyM9F5DGTpEuwvL"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Institucional – SEBRAE-RJ (Fim de Ano)</h3>
+        </div>
+      </div>
+   
+
+
+
+      <!-- VIDEO 1 - VERTICAL (9:16) -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1157286146?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo criado com Inteligência Artificial</h3>
+        </div>
+      </div>
+
+            <!-- VIDEO 3 - VERTICAL -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1161392669?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo criado com Inteligência Artificial</h3>
+        </div>
+      </div>
+
+      <!-- VIDEO 4 - VERTICAL -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1163432577?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo criado com Inteligência Artificialk</h3>
+        </div>
+      </div>
+
+      <!-- VIDEO 5 - VERTICAL -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1163415583?title=0&byline=0&portrait=0" 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo criado com Inteligência Artificial</h3>
+        </div>
+      </div>
+
+      <!-- VIDEO 6 - VERTICAL -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1157577039?title=0&byline=0&portrait=0" <!-- VIDEO pantone -->
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo criado com Inteligência Artificial</h3>
+        </div>
+      </div>
+     
+      
+      <!-- VIDEO 7 - VERTICAL -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1163775206?title=0&byline=0&portrait=0"  <!-- VIDEO 8 Marry -->
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo criado com Inteligência Artificial</h3>
+        </div>
+      </div>
+  
+       <!-- VIDEO 8 - VERTICAL -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1161388192?title=0&byline=0&portrait=0"  <!-- VIDEO legend cutss -->
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo criado com Inteligência Artificial</h3>
+        </div>
+      </div>
+      
+            <!-- VIDEO 7 - VERTICAL -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1163775206?title=0&byline=0&portrait=0"  <!-- VIDEO 8 Marry -->
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo criado com Inteligência Artificial</h3>
+        </div>
+      </div>
+      
+   
+      <!-- Repita os cards acima conforme necessário -->
+     <footer>
+  © 2026 RCNP-MAKER • Desenvolvido por RCNP-MAKER
+    </footer>     
+    </section>
+
+  </div>
+</div>
+</body>
+</html>
