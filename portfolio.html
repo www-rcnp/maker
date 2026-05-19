@@ -79,7 +79,7 @@ header h1{
   color:#000;
 }
 
-/* LOGOS */
+/* LOGOS ====================================================
 .empresas{
   margin-top:15px;
   display:flex;
@@ -97,7 +97,174 @@ header h1{
 .empresas a img:hover{
   opacity:1;
   transform:scale(1.05);
+} */
+
+/* LOGOS nOVO ================================================= */
+
+
+
+/* ========================================= */
+/* LOGOS MARQUEE PREMIUM */
+/* ========================================= */
+
+.logos-section{
+  margin-top:25px;
 }
+
+.logos-title{
+  margin-bottom:18px;
+  font-weight:bold;
+  font-size:15px;
+  letter-spacing:.5px;
+  color:#EFC020;
+  opacity:.9;
+}
+
+/* CONTAINER */
+
+.logos-marquee{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 8%,
+    white 92%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 8%,
+    white 92%,
+    transparent
+  );
+}
+
+/* TRACK */
+
+.logos-track{
+  display:flex;
+  align-items:center;
+  gap:22px;
+
+  width:max-content;
+
+  animation: marqueeScroll 28s linear infinite;
+}
+
+/* CARD */
+
+.logo-item{
+  width:170px;
+  height:78px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  flex-shrink:0;
+
+  border-radius:22px;
+
+  background:rgba(255,255,255,.04);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(14px);
+
+  transition:.35s ease;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* GLOW */
+
+.logo-item::before{
+  content:"";
+
+  position:absolute;
+  inset:-1px;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(239,192,32,.18),
+    transparent
+  );
+
+  transform:translateX(-100%);
+
+  transition:.6s;
+}
+
+/* HOVER */
+
+.logo-item:hover{
+  transform:translateY(-4px);
+
+  background:rgba(255,255,255,.07);
+
+  box-shadow:
+    0 0 20px rgba(239,192,32,.12),
+    0 0 40px rgba(239,192,32,.06);
+}
+
+.logo-item:hover::before{
+  transform:translateX(100%);
+}
+
+/* IMG */
+
+.logo-item img{
+  max-width:110px;
+  max-height:42px;
+
+  object-fit:contain;
+
+  opacity:.85;
+
+  transition:.35s ease;
+
+  filter:
+    brightness(1.05)
+    contrast(1.05);
+}
+
+.logo-item:hover img{
+  opacity:1;
+  transform:scale(1.05);
+}
+
+/* ANIMAÇÃO */
+
+@keyframes marqueeScroll{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .back{
   text-decoration:none;
@@ -204,7 +371,7 @@ footer{
         Ferramentas utilizadas: Adobe Premiere Pro, CapCut, Adobe Photoshop, Adobe Podcast, Audacity.
       </div>
 
-      <!-- LOGOS EMPRESAS -->
+      <!-- LOGOS EMPRESAS 
       <div class="empresas">
       <p style="margin-top:15px; font-weight:bold; opacity:.8; color:#EFC020;">
         Projetos desenvolvidos para:
@@ -239,11 +406,74 @@ footer{
         <!-- LOGOS EMPRESAS - AQUI PODE SER ADICIONADO MAIS EMPRESAS, BASTA ABRIR O COMENTÁRIO
         <a href="https://www.empresa3.com.br" target="_blank">
           <img src="logo3.png" alt="Empresa 3">
-        </a> -->
+        </a> 
 
 
       </div>
+    </div> -->
+	
+	
+    <!-- CÓDIGO PARA LOGOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  -->
+	
+	<!-- LOGOS EMPRESAS -->
+<div class="logos-section">
+
+  <p class="logos-title">
+    Projetos desenvolvidos para:
+  </p>
+
+  <div class="logos-marquee">
+
+    <div class="logos-track">
+
+      <!-- LOGOS -->
+
+      <a href="https://www.qconcursos.com/" target="_blank" class="logo-item">
+        <img src="VQ_4.png" alt="QConcursos">
+      </a>
+
+      <a href="https://direitoreal.com.br" target="_blank" class="logo-item">
+        <img src="VD_1.png" alt="Direito Real">
+      </a>
+
+      <a href="https://estilomiele.com" target="_blank" class="logo-item">
+        <img src="MM_1.png" alt="Estilo Miele">
+      </a>
+
+      <a href="#" target="_blank" class="logo-item">
+        <img src="AG_01.png" alt="Agrolog">
+      </a>
+
+      <!-- DUPLICAÇÃO PARA LOOP -->
+
+      <a href="https://www.qconcursos.com/" target="_blank" class="logo-item">
+        <img src="VQ_4.png" alt="QConcursos">
+      </a>
+
+      <a href="https://direitoreal.com.br" target="_blank" class="logo-item">
+        <img src="VD_1.png" alt="Direito Real">
+      </a>
+
+      <a href="https://estilomiele.com" target="_blank" class="logo-item">
+        <img src="MM_1.png" alt="Estilo Miele">
+      </a>
+
+      <a href="#" target="_blank" class="logo-item">
+        <img src="AG_01.png" alt="Agrolog">
+      </a>
+
     </div>
+
+  </div>
+
+</div>
+	
+	
+	
+	
+	
+	
+	
 
     <section class="grid">
 
@@ -718,9 +948,6 @@ footer{
 </body>
 
 </html>
-
-
-
 
 
 
