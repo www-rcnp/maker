@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<link rel="icon" type="image/png" sizes="32x32" href="i9.png">  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfólio | RCNP-MAKER</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+.page{
+  min-height:100vh;
+  background:url("fundo.png") center/cover no-repeat;
+  position:relative;
+}
+
+.page::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.0);
+}
+
+.container{
+  position:relative;
+  z-index:2;
+  padding:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+header h1{
+  font-size:22px;
+  margin:0;
+  color:#EFC020;
+  text-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+/* MINI CURRICULO */
+.mini-box{
+  margin-bottom:30px;
+}
+
+/* AQUI É O TEXTO DO NOME ABAIXO DA MARCA >>>>>>>>>>>>>>>>>>>>>>*/
+.mini-title{
+  font-size:18px;
+  opacity:.8;
+  margin:5px 0 10px 0;
+  color:#000;
+}
+
+/* AQUI É O TEXTO DE APRESENTAÇÃO ABAIXO DA MARCA >>>>>>>>>>>>>>>>>>>>>>*/
+.mini-text{
+  font-size:14px;
+  line-height:1.5;
+  opacity:.85;
+  max-width:800px;
+  color:#000;
+  text-align: justify
+}
+
+/* LOGOS ====================================================
+.empresas{
+  margin-top:15px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.empresas a img{
+  height:40px;
+  width:auto;
+  opacity:.85;
+  transition:.3s;
+}
+
+.empresas a img:hover{
+  opacity:1;
+  transform:scale(1.05);
+} */
+
+/* LOGOS nOVO ================================================= */
+
+
+
+/* ========================================= */
+/* LOGOS MARQUEE PREMIUM */
+/* ========================================= */
+
+.logos-section{
+  margin-top:25px;
+}
+
+.logos-title{
+  margin-bottom:18px;
+  font-weight:bold;
+  font-size:15px;
+  letter-spacing:.5px;
+  color:#EFC020;
+  opacity:.9;
+}
+
+/* CONTAINER */
+
+.logos-marquee{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 8%,
+    white 92%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 8%,
+    white 92%,
+    transparent
+  );
+}
+
+/* TRACK */
+
+.logos-track{
+  display:flex;
+  align-items:center;
+  gap:22px;
+
+  width:max-content;
+
+  animation: marqueeScroll 28s linear infinite;
+}
+
+/* CARD */
+
+.logo-item{
+  width:170px;
+  height:78px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  flex-shrink:0;
+
+  border-radius:22px;
+
+  background:rgba(255,255,255,.04);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(14px);
+
+  transition:.35s ease;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* GLOW */
+
+.logo-item::before{
+  content:"";
+
+  position:absolute;
+  inset:-1px;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(239,192,32,.18),
+    transparent
+  );
+
+  transform:translateX(-100%);
+
+  transition:.6s;
+}
+
+/* HOVER */
+
+.logo-item:hover{
+  transform:translateY(-4px);
+
+  background:rgba(255,255,255,.07);
+
+  box-shadow:
+    0 0 20px rgba(239,192,32,.12),
+    0 0 40px rgba(239,192,32,.06);
+}
+
+.logo-item:hover::before{
+  transform:translateX(100%);
+}
+
+/* IMG */
+
+.logo-item img{
+  max-width:110px;
+  max-height:42px;
+
+  object-fit:contain;
+
+  opacity:.85;
+
+  transition:.35s ease;
+
+  filter:
+    brightness(1.05)
+    contrast(1.05);
+}
+
+.logo-item:hover img{
+  opacity:1;
+  transform:scale(1.05);
+}
+
+/* ANIMAÇÃO */
+
+@keyframes marqueeScroll{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.back{
+  text-decoration:none;
+  color:#000;
+  background:#efcc20;
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns:1fr;
+} 
+
+  
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,.08);
+  border-radius:16px;
+  overflow:hidden;
+  backdrop-filter: blur(8px);
+}
+
+/* VIDEO WRAPPER */
+.video-wrapper{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#000;
+}
+
+.video-wrapper.vertical{
+  padding-top:177.78%;
+}
+
+.video-wrapper.horizontal{
+  padding-top:56.25%;
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* INFO */
+.card .info{
+  padding:12px;
+}
+
+.card h3{
+  font-size:15px;
+  margin:0;
+  opacity:.9;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  text-align:center;
+  font-size:13px;
+  opacity:.7;
+}
+
+/* DESKTOP */
+@media (min-width:768px){
+  .grid{
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  }
+    .card-horizontal{
+    grid-column: span 2;
+  }
+ 
+  header h1{
+    font-size:28px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+  <div class="container">
+
+    <header>
+      <h1>Portfólio | RCNP-MAKER | Animações</h1>
+      <a class="back" href="index.html">Voltar</a>
+    </header>
+
+    <!-- MINI CURRÍCULO -->
+    <div class="mini-box">
+      <div class="mini-title">Rafael Cinalli</div>
+      <div class="mini-text">
+       Profissional especializado em criação de conteúdo multimídia, atuando na produção de imagens, áudio, vídeo e textos. <br>
+	   Técnico em Informática e Designer Grafico, com experiência em criação com I.A, edição de Imagem e Vídeo.
+	   Especialista em softwares e ferramentas de produção audiovisual e inteligência artificial, com domínio em:  Adobe Photoshop, Adobe Premiere Pro, CapCut, Adobe Podcast, Audacity, ElevenLabs, Grok, Artlist.io, Sora, Veo 3, entre outras plataformas voltadas à criação de conteúdo digital.
+      </div>
+
+      <!-- LOGOS EMPRESAS 
+      <div class="empresas">
+      <p style="margin-top:15px; font-weight:bold; opacity:.8; color:#EFC020;">
+        Projetos desenvolvidos para:
+      </p>
+
+        <a href="https://www.qconcursos.com/" target="_blank">
+          <img src="VQ_4.png" alt="SEBRAE">
+        </a>  
+        
+        <a href="https://direitoreal.com.br" target="_blank">
+          <img src="VD_1.png" alt="Empresa 2">
+        </a>
+
+           <a href="https://estilomiele.com" target="_blank">
+          <img src="MM_1.png" alt="Empresa 2">
+        </a>
+
+          <a href="000000000" target="_blank">
+          <img src="AG_01.png" alt="Empresa 2">
+        </a>
+
+         <!-- LOGOS EMPRESAS - AQUI PODE SER ADICIONADO MAIS EMPRESAS, BASTA ABRIR O COMENTÁRIO
+        <a href="https://www.empresa3.com.br" target="_blank">
+          <img src="logo3.png" alt="Empresa 3">
+        </a> -->
+
+        <!-- LOGOS EMPRESAS - AQUI PODE SER ADICIONADO MAIS EMPRESAS, BASTA ABRIR O COMENTÁRIO
+        <a href="https://www.empresa3.com.br" target="_blank">
+          <img src="logo3.png" alt="Empresa 3">
+        </a> -->
+
+        <!-- LOGOS EMPRESAS - AQUI PODE SER ADICIONADO MAIS EMPRESAS, BASTA ABRIR O COMENTÁRIO
+        <a href="https://www.empresa3.com.br" target="_blank">
+          <img src="logo3.png" alt="Empresa 3">
+        </a> 
+
+
+      </div>
+    </div> -->
+	
+	
+    <!-- CÓDIGO PARA LOGOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  -->
+	
+	<!-- LOGOS EMPRESAS -->
+<div class="logos-section">
+
+  <p class="logos-title">
+    Projetos desenvolvidos para:
+  </p>
+
+  <div class="logos-marquee">
+
+    <div class="logos-track">
+
+      <!-- LOGOS -->
+
+      <a href="https://atacadaodasbateriaspvai.com.br" target="_blank" class="logo-item">
+        <img src="01_mercadolivre.png" alt="Atacadão das Baterias">
+      </a>
+
+      <a href="https://casasdasbateriasmaringa.com.br" target="_blank" class="logo-item">
+        <img src="01_shein.png" alt="Casa das Baterias Tanno">
+      </a>
+      <a href="https://www.instagram.com/voevamaringa" target="_blank" class="logo-item">
+        <img src="01_shopee.png" alt="Vó Eva Restaurante">
+      </a>
+
+	  <a href="https://audyox.com.br" target="_blank" class="logo-item">
+        <img src="01_temu.png" alt="Audyox">
+      </a>
+		
+       <a href="https://www.metalon.com.br" target="_blank" class="logo-item">
+        <img src="01_tiktokshop.png" alt="METALON">
+      </a>
+	  
+	  <!-- <a href="https://estilomiele.com" target="_blank" class="logo-item">
+        <img src="MM_1.png" alt="Estilo Miele">
+      </a>
+
+      <a href="#" target="_blank" class="logo-item">
+        <img src="AG_01.png" alt="Agrolog">
+      </a> -->
+
+     
+		
+      <!-- DUPLICAÇÃO PARA LOOP -->
+
+            <a href="https://atacadaodasbateriaspvai.com.br" target="_blank" class="logo-item">
+        <img src="01_mercadolivre.png" alt="Atacadão das Baterias">
+      </a>
+
+      <a href="https://casasdasbateriasmaringa.com.br" target="_blank" class="logo-item">
+        <img src="01_shein.png" alt="Casa das Baterias Tanno">
+      </a>
+      <a href="https://www.instagram.com/voevamaringa" target="_blank" class="logo-item">
+        <img src="01_shopee.png" alt="Vó Eva Restaurante">
+      </a>
+
+	  <a href="https://audyox.com.br" target="_blank" class="logo-item">
+        <img src="01_temu.png" alt="Audyox">
+      </a>
+		
+       <a href="https://www.metalon.com.br" target="_blank" class="logo-item">
+        <img src="01_tiktokshop.png" alt="METALON">
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+	
+	
+	
+	
+	
+	
+	
+
+    <section class="grid">
+
+      <!-- TODOS OS SEUS VIDEOS ORIGINAIS AQUI (NÃO ALTERADOS) -->
+
+ <section class="grid">
+
+         <!-- VIDEO 2 - HORIZONTAL (16:9) SEBRAE-RJ 
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://player.vimeo.com/video/1163709757?title=0&byline=0&portrait=0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Institucional – SEBRAE-RJ (Fim de Ano)</h3>
+        </div>
+      </div>
+
+
+  VIDEO 2 - HORIZONTAL (16:9) (LETICIA DELGADO - CORREÇÃO DE COR)
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/--YPZagsikI?si=LHfsAM97K89FwxKQ"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Leticia Delgado-Direito Real</h3>
+        </div>
+      </div>
+
+   VIDEO 2 - HORIZONTAL (16:9) (SEBEN AGROLOG)
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/YW4MMGtsIGA?si=jI6UkedCVZfPAqMx"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Leticia Delgado-Direito Real</h3>
+        </div>
+      </div>
+   
+
+    VIDEO 2 - HORIZONTAL (16:9) FRED ALVIM - QUESTÃO 
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/IXK-cXrowQM?si=8iefQq2YYYU5vd1M"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Fred Alvim-Questões comentadas-QConcursos</h3>
+        </div>
+      </div>
+
+   
+     VIDEO 2 - HORIZONTAL (16:9) Isabel 
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/NhniFJu0vqE?si=Tr0v2WT-P4xiUhnw"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Isabel Vega-Questões comentadas-QConcursos</h3>
+        </div>
+      </div>
+
+       VIDEO 2 - HORIZONTAL (16:9) Luciana 
+       <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/mx8NneQwego?si=dYTOLnBZ5XgqGzH7"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Luciana-Questões comentadas-QConcursos</h3>
+        </div>
+      </div>
+
+
+
+          VIDEO 2 - HORIZONTAL (16:9) ARTUR VIEIRA QUESTÃO
+         <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/AH2GqdC4zBc?si=3MlxrIyIFg-b1417"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Artur Vieira-Questões comentadas-QConcursos</h3>
+        </div>
+      </div> 
+
+
+
+         VIDEO 2 - HORIZONTAL (16:9)
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo-Questões comentadas-QConcursos</h3>
+        </div>
+      </div> 
+
+   
+
+        VIDEO 2 - HORIZONTAL (16:9)
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/DY4vCcd8u6c?si=TkyM9F5DGTpEuwvL"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo-Questões comentadas-QConcursos</h3>
+        </div>
+      </div> 
+
+      <!-- VIDEO 2 - HORIZONTAL (16:9)
+      <div class="card card-horizontal">
+        <div class="video-wrapper horizontal">
+          <iframe 
+            src="https://www.youtube.com/embed/DY4vCcd8u6c?si=TkyM9F5DGTpEuwvL"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo-Questões comentadas-QConcursos</h3>
+        </div>
+      </div> -->
+   
+
+
+
+      <!-- VIDEO 1 - VERTICAL (9:16) [oculos] -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1157286146?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo feito com Inteligência Artificial para divulgação de produtos</h3>
+        </div>
+      </div>
+
+
+
+
+	  <!-- VIDEO 1 - VERTICAL (9:16) Camisa 09 -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1203556101?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo feito com Inteligência Artificial para divulgação de produtos</h3>
+        </div>
+      </div>
+
+      <!-- VIDEO 1 - VERTICAL (9:16) [pó soham] -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1203570212?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo feito com Inteligência Artificial para divulgação de produtos</h3>
+        </div>
+      </div>
+	  
+	              <!-- VIDEO 1 - VERTICAL (9:16) [caneta vivai delineadora] -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1203572401?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo feito com Inteligência Artificial para divulgação de produtos</h3>
+        </div>
+      </div> 
+	  
+
+            <!-- VIDEO 1 - VERTICAL (9:16) [impressora termica] -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1203574627?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo feito com Inteligência Artificial para divulgação de produtos</h3>
+        </div>
+      </div> 
+	  
+	  
+	              <!-- VIDEO 1 - VERTICAL (9:16) [Etiqueta termica] -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1203577357?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo feito com Inteligência Artificial para divulgação de produtos</h3>
+        </div>
+      </div> 
+	  
+	  	              <!-- VIDEO 1 - VERTICAL (9:16) [envelope de envio rosa] -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1203578169?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo feito com Inteligência Artificial para divulgação de produtos</h3>
+        </div>
+      </div> 
+	  
+	          <!-- VIDEO 1 - VERTICAL (9:16) [bagtom vivai] -->
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1203573655?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo feito com Inteligência Artificial para divulgação de produtos</h3>
+        </div>
+      </div>
+   
+    <!-- Fechados----------------------------------------------------------------------------------------------------------------------------------------------- -->
+   
+ <!-- VIDEO 7 - VERTICAL (Long Lib)
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://www.youtube.com/embed/Bn31NgG9CWc?si=oFSGohuIU9m-znOL"  <!-- Long LiB TIKTOK SHOPE 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div> -->
+
+      <!-- VIDEO 2 - VERTICAL [Eco Care] 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://www.youtube.com/embed/6SktqgfwVH8?si=I3sZiqByedrmk3vf"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div> -->
+
+<!-- VIDEO 2 - VERTICAL [SEBEN AGROLOG] 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://www.youtube.com/embed/Qzhu7KqM8I8?si=l6k-_g2TLv4aDWdx"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div> -->
+
+   
+
+         <!-- VIDEO 2 - VERTICAL [Metalon]
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://www.youtube.com/embed/bamNZxZFkfI?si=OMm5SIzgdNwl7rWd"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>   -->
+   
+
+            <!-- VIDEO 2 - VERTICAL [Você está se sabotando_Com_Trilha_Marry--] 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1170065962?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+        <!-- VIDEO 2 - VERTICAL [Suas pernas não são curtas_Com Trilha] 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1170062330?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+    <!-- VIDEO 2 - VERTICAL [Calor 14] 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1169753629?title=0&byline=0&portrait=0"  <!-- VIDEO Marry Calor 14 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+   
+   <!-- VIDEO 3 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1161392669?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+      <!-- VIDEO 4 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1163432577?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+      <!-- VIDEO 5 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1163415583?title=0&byline=0&portrait=0" 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+      <!-- VIDEO 6 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1157577039?title=0&byline=0&portrait=0" <!-- VIDEO pantone 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+     
+      
+      <!-- VIDEO 7 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1163775206?title=0&byline=0&portrait=0"  <!-- VIDEO 8 Marry 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+  
+       <!-- VIDEO 8 - VERTICAL Cabelo___  
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1170052134?title=0&byline=0&portrait=0"  <!-- VIDEO Marry Teto - Cabelo 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+ <!-- VIDEO 7 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1180802658?title=0&byline=0&portrait=0"  <!-- Marry 25 Hora de Malhar 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+  
+             <!-- VIDEO 7 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://www.youtube.com/embed/W9239NiyHOI?si=Ny1IYBILCtcf0KyD"  <!-- VIDEO O Poder da Concultoria_Kate Middleton 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+
+              <!-- VIDEO 7 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://www.youtube.com/embed/7LOFZ5-QMck?si=YW5kEtp2wmSSAfn7 "  <!-- VIDEO O Poder da Concultoria_Victoria Beckham 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>
+
+         <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://www.youtube.com/embed/RSFAQPnTdCI?si=hLwvDls3eWB3tTm8"  <!-- VIDEO O Poder da Concultoria_Anne Hathaway 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+   
+
+             <!-- VIDEO 7 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1180799063?title=0&byline=0&portrait=0"  <!-- VIDEO legend cutss EQM-fundo 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+   
+            <!-- VIDEO 7 - VERTICAL 
+      <div class="card">
+        <div class="video-wrapper vertical">
+          <iframe 
+            src="https://player.vimeo.com/video/1161388192?title=0&byline=0&portrait=0"  <!-- VIDEO legend cutss PodTrash 
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="info">
+          <h3>Vídeo Criado com Inteligência Artificial</h3>
+        </div>
+      </div>-->
+      
+   
+      <!-- Repita os cards acima conforme necessário -->
+     <footer>
+  © 2026 RCNP-MAKER • Desenvolvido por RCNP-MAKER
+    </footer>     
+    </section>
+
+  </div>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
